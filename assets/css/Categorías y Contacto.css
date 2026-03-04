@@ -470,12 +470,18 @@ footer{
     }
 
     .contacto-div {
-        gap: 16px;
+        gap: 14px;
     }
 
     .contacto-ul li div {
         padding: 12px 16px;
     }
+
+    .form-group input,
+    .form-group textarea {
+        width: 90%;
+    }
+
 
     .btn {
         font-size: 0.9rem;
