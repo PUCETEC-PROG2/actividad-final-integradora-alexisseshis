@@ -1,0 +1,482 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@700&family=Raleway:wght@300;700&family=Nunito:wght@300;400&display=swap');
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    background-color: black;
+    background-image: url("../img/fondo.jpg");
+    background-size: cover;
+    background-attachment: fixed; 
+}
+
+h1 {
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 700;
+    font-size: 5rem;
+    text-shadow: 0px 0px 20px #43c3ff;
+    letter-spacing: 2px;
+    text-align: center;
+    color: rgb(0, 179, 255);
+}
+
+h2, h3 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 300;
+    text-align: center;
+    color: white;
+}
+
+h2 strong, .highlight {
+    font-weight: 700;
+    text-align: center;
+    color: white;
+}
+
+p, label, input, textarea, li {
+    font-family: 'Nunito', sans-serif;;
+    font-weight: 300;
+    text-align: center;
+    color: white;
+}
+
+/*Header */
+
+.header-seccion{
+    padding: 10px;
+    margin: 0px;
+    background: rgba(38, 38, 65, 0.46);
+    backdrop-filter: blur(6.8px);
+    border-bottom: 1px solid rgb(43, 86, 255);
+    box-shadow: 0px 15px 30px 2px rgba(100, 55, 223, 0.338);
+    
+}
+
+.header-div{
+    display: flex;
+    flex-direction: row;
+    gap: 5%;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-div ul{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}
+
+.header-div li{
+    text-align: center;
+    align-content: center;
+    padding: 5px;
+    text-shadow: 0px 0px 20px #43c3ff;
+    border-bottom: 2px solid rgb(42, 184, 255);
+    border-radius: 5px;
+    width: 100%;
+    min-height: 35px;
+    list-style: none;
+    box-shadow: 0px 10px 10px -10px #1ef4ff;
+}
+
+
+.header-div li:hover{
+    border-color: #a51eff;
+    box-shadow: 0px 15px 10px -10px #a51eff;
+}
+
+.logo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    padding: 10px;
+    width: 100px;
+    overflow: hidden;
+
+}
+
+.logo:hover{
+    background-image: radial-gradient(circle, rgb(164, 32, 212) 22%, rgba(109, 111, 227, 0) 60%);
+}
+
+.logo img{
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+}
+
+
+a{
+    color: white;
+    text-decoration: none;
+
+}
+
+
+/*Categorias tarjetas*/
+.titulo-seccion{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.categoria-seccion{
+    display:flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.categoria-seccion div{
+    padding: 10%;
+
+}
+
+
+.categorias-div{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    gap: 30px;
+}
+
+.opcion-div{
+    width: 200px;
+    padding: 10px;
+    background: rgba(63, 63, 209, 0.46);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(6.8px);
+    border: 1px solid rgba(63, 63, 209, 1);
+}
+
+
+
+.opcion-a{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    gap: 20px;
+    overflow: hidden;
+    
+}
+
+.opcion-a h3{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: rgb(0, 179, 255);
+    text-shadow: 0px 0px 10px #43c3ff;
+    margin-bottom: 4px;
+}
+
+.opcion-a img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    border: 1px solid rgba(63, 63, 209, 1);
+}
+
+/*contacto*/
+
+.contacto-div{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    gap: 30px;
+}
+
+.contacto-div div{
+    padding: 5%;
+}
+
+.contacto-ul{
+    list-style: none;
+}
+
+/* Contacto */
+.info-seccion {
+    padding: 40px 20px;
+}
+
+.info-seccion p {
+    max-width: 600px;
+    margin: 0 auto 20px auto;
+}
+
+.contacto-ul li {
+    background: rgba(63, 63, 209, 0.46);
+    border: 1px solid rgba(63, 63, 209, 1);
+    border-radius: 16px;
+    backdrop-filter: blur(6.8px);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    margin-bottom: 12px;
+    max-width: 500px;
+    margin-inline: auto;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.contacto-ul li:hover {
+    border-color: #a51eff;
+    box-shadow: 0 0 20px rgba(165, 30, 255, 0.3);
+}
+
+.contacto-ul li div {
+    padding: 16px 24px;
+}
+
+.contacto-ul h3 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: rgb(0, 179, 255);
+    text-shadow: 0px 0px 10px #43c3ff;
+    margin-bottom: 4px;
+}
+
+.contacto-ul p {
+    font-size: 0.95rem;
+    color: #d0d0e8;
+}
+
+/* Sección del formulario */
+.contacto-seccion {
+    padding: 20px 20px 60px 20px;
+    max-width: 620px;
+    margin: 0 auto;
+}
+
+/* Mensaje de éxito */
+.form-success {
+    background: rgba(0, 229, 100, 0.15);
+    border: 1px solid rgba(0, 229, 100, 0.5);
+    border-radius: 10px;
+    padding: 14px 20px;
+    margin-bottom: 24px;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 400;
+    color: #00e564;
+    text-align: center;
+}
+
+/* Grupo de campo */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: rgb(0, 179, 255);
+    text-align: left;
+}
+
+.required {
+    color: #ff4b6e;
+}
+
+/* Inputs y textarea */
+.form-group input,
+.form-group textarea {
+    background: rgba(38, 38, 65, 0.6);
+    border: 1px solid rgba(63, 63, 209, 1);
+    border-radius: 10px;
+    padding: 12px 16px;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 300;
+    font-size: 0.95rem;
+    color: white;
+    text-align: left;
+    outline: none;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    width: 100%;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: rgb(42, 184, 255);
+    box-shadow: 0 0 12px rgba(42, 184, 255, 0.25);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+/* Error de campo */
+.form-error {
+    font-family: 'Nunito', sans-serif;
+    font-size: 0.8rem;
+    color: #ff4b6e;
+    text-align: left;
+    min-height: 16px;
+}
+
+/* Input con error */
+.input-error {
+    border-color: #ff4b6e !important;
+    box-shadow: 0 0 10px rgba(255, 75, 110, 0.3) !important;
+}
+
+/* Botón enviar */
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: 10px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    cursor: pointer;
+    border: none;
+    transition: 0.3s ease;
+    background: rgb(42, 184, 255);
+    color: #000;
+}
+
+
+
+.btn-primary:hover {
+    background: #33ecff;
+    box-shadow: 0 0 20px rgba(42, 184, 255, 0.5);
+    transform: translateY(-2px);
+}
+
+.btn-full {
+    width: 100%;
+    text-align: center;
+}
+
+/*Footer*/
+
+footer{
+    position: relative;
+    bottom: 0px;
+}
+/* ===========================
+   RESPONSIVE
+   =========================== */
+
+/* Tablet */
+@media (max-width: 768px) {
+
+    h1 {
+        font-size: 3rem;
+    }
+
+    /* Header */
+    .header-div {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .header-div ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    /* Categorías */
+    .categoria-seccion div {
+        padding: 5%;
+    }
+
+    .categorias-div {
+        gap: 20px;
+    }
+
+    .opcion-div {
+        width: 160px
+    }
+
+    /* Contacto */
+
+    .info-seccion {
+        padding: 24px 16px;
+    }
+
+    .contacto-seccion {
+        padding: 16px 16px 40px 16px;
+        max-width: 500px;
+    }
+
+    .contacto-ul li {
+        max-width: 100%;
+    }
+
+    /* Footer */
+    footer {
+        text-align: center;
+        padding: 16px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+
+    h1 {
+        font-size: 2.2rem;
+        letter-spacing: 1px;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    /* Categorías: una por fila */
+    .categorias-div {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .opcion-div {
+        width: 90%;
+        max-width: 320px;
+    }
+
+    /* Contacto */
+    .contacto-seccion {
+        max-width: 320px;
+    }
+
+    .contacto-div {
+        gap: 16px;
+    }
+
+    .contacto-ul li div {
+        padding: 12px 16px;
+    }
+
+    .btn {
+        font-size: 0.9rem;
+        padding: 10px 16px;
+    }
+}
