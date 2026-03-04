@@ -394,14 +394,16 @@ footer{
 
     /* Header */
     .header-div {
-        flex-direction: column;
-        gap: 10px;
+        gap: 5px;
     }
 
     .header-div ul {
         flex-wrap: wrap;
         justify-content: center;
         gap: 10px;
+    }
+    .header-div ul li {
+        max-width: 70px;
     }
 
     /* Categorías */
@@ -480,3 +482,8 @@ footer{
         padding: 10px 16px;
     }
 }
+footer{
+    position: relative;
+    bottom: 0px;
+}
+
