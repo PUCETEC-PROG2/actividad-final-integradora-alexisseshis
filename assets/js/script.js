@@ -1,11 +1,11 @@
     const form = document.getElementById('contact-form');
 
-    // --- Utilidades ---
+
     function showError(fieldId, message) {
       const errorEl = document.getElementById(fieldId + '-error');
       const inputEl = document.getElementById(fieldId);
-      if (errorEl) errorEl.textContent = message;
-      if (inputEl) inputEl.classList.add('input-error');
+      if (errorEl){ errorEl.textContent = message;}
+      else if (inputEl){ inputEl.classList.add('input-error');}
     }
 
     function clearError(fieldId) {
@@ -16,31 +16,35 @@
     }
 
     function isValidEmail(email) {
-      // Expresión regular básica para validar formato de email
+
       const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
       return regex.test(email);
     }
 
-    // --- Validación en tiempo real (al salir del campo) ---
-    const fields = ['nombre', 'ciudad', 'email', 'asunto', 'descripcion'];
-    fields.forEach(function(fieldId) {
-      const el = document.getElementById(fieldId);
-      if (el) {
-        el.addEventListener('blur', function() {
+
+var fields = ['nombre', 'ciudad', 'email', 'asunto', 'descripcion'];
+for (var i = 0; i < fields.length; i++) {
+  (function(fieldId) {
+    var el = document.getElementById(fieldId);
+    if (el) {
+      el.onblur = function() {
+        validateField(fieldId);
+      };
+      el.oninput = function() {
+        if (el.classList.contains('input-error')) {
           validateField(fieldId);
-        });
-        el.addEventListener('input', function() {
-          // Limpia el error mientras el usuario escribe (UX)
-          if (el.classList.contains('input-error')) {
-            validateField(fieldId);
-          }
-        });
-      }
-    });
+        }
+      };
+    }
+  })(fields[i]);
+}
 
     function validateField(fieldId) {
-      const el = document.getElementById(fieldId);
-      const value = el ? el.value.trim() : '';
+      var el = document.getElementById(fieldId);
+      var value = '';
+      if (el) {
+        value = el.value.trim();
+      }
       clearError(fieldId);
 
       if (fieldId === 'nombre') {
@@ -94,26 +98,29 @@
     }
 
     // --- Envío del formulario ---
-    form.addEventListener('submit', function(event) {
-      event.preventDefault(); // Evita el envío nativo
-
+    form.onsubmit = function(event) {
       // Valida todos los campos
-      let isValid = true;
-      fields.forEach(function(fieldId) {
-        const fieldValid = validateField(fieldId);
-        if (!fieldValid) isValid = false;
-      });
+      var isValid = true;
+      for (var j = 0; j < fields.length; j++) {
+        var fieldValid = validateField(fields[j]);
+        if (!fieldValid) {
+          isValid = false;
+        }
+      }
 
       if (!isValid) {
         // Hace scroll al primer error visible
-        const firstError = form.querySelector('.input-error');
-        if (firstError) firstError.focus();
-        return;
+        var firstError = form.querySelector('.input-error');
+        if (firstError) {
+          firstError.focus();
+        }
+        return false; // cancela envío
       }
 
       // Si todo está bien, muestra mensaje de éxito y reinicia el formulario
-      const successMsg = document.getElementById('success-message');
+      var successMsg = document.getElementById('success-message');
       successMsg.hidden = false;
       successMsg.scrollIntoView({ behavior: 'smooth' });
       form.reset();
-    });
+      return true; // permite envío
+    };

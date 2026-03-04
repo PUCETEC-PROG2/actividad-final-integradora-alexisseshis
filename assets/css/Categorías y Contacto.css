@@ -45,6 +45,12 @@ p, label, input, textarea, li {
 /*Header */
 
 .header-seccion{
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1000;    
     padding: 10px;
     margin: 0px;
     background: rgba(38, 38, 65, 0.46);
